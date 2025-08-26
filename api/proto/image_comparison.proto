@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package image_comparison;
+
+option go_package = "api/proto/generated";
+
+message CompareRequest {
+    bytes image1 = 1; // First image in bytes
+    bytes image2 = 2; // Second image in bytes
+}
+
+message CompareResponse {
+    string status = 1; // Статус сравнения (например, "success", "error")
+    string error = 2; // Сообщение об ошибке, если есть
+    float similarity_score = 3; // Оценка сходства от 0.0 до 1.0
+}
+
+service ImageComparisonService {
+    rpc CompareImages(CompareRequest) returns (CompareResponse);
+}
