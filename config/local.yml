@@ -1,0 +1,12 @@
+env: "local"
+model_path: "models/siamese_network.onnx"
+server:
+  host: "localhost"
+  port: "8080"
+  read_timeout: 4s
+  write_timeout: 4s
+image:
+  width: 48
+  height: 48
+processing:
+  timeout: 15s
