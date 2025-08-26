@@ -1,3 +1,3 @@
-module todo-bichig-comparsion
+module todo-bichig-comparison
 
 go 1.24
